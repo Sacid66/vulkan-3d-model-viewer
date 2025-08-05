@@ -48,9 +48,6 @@ A high-performance 3D model viewer built with modern Vulkan API, featuring advan
 *Load and view multiple 3D models simultaneously*
 ![Multi Model Scene](screenshots/multi_model_scene.gif)
 
-### UV Debug Mode
-*Advanced UV coordinate visualization for texture debugging*
-![UV Debug Mode](screenshots/uv_debug_mode.png)
 
 ### Texture Assignment
 *Easy drag-and-drop texture assignment per mesh*
