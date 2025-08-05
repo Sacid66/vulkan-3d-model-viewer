@@ -57,7 +57,7 @@ A high-performance 3D model viewer built with modern Vulkan API, featuring advan
 *Intuitive transform controls with live preview*
 ![Transform Editing](screenshots/transform_editing.gif)
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
