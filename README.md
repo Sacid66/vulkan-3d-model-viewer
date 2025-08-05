@@ -71,7 +71,7 @@ A high-performance 3D model viewer built with modern Vulkan API, featuring advan
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/vulkan-3d-model-viewer.git
+   git clone https://github.com/Sacid66/vulkan-3d-model-viewer.git
    cd vulkan-3d-model-viewer
    ```
 
