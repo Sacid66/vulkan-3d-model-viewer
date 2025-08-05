@@ -7,7 +7,7 @@
 A high-performance 3D model viewer built with modern Vulkan API, featuring advanced UV mapping algorithms, real-time rendering, and an intuitive drag-and-drop interface.
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Vulkan](https://img.shields.io/badge/Vulkan-1.3-red.svg)](https://vulkan.org/)
+[![Vulkan](https://img.shields.io/badge/Vulkan-1.4-red.svg)](https://vulkan.org/)
 [![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg)](https://github.com/yourusername/vulkan-3d-model-viewer)
 
 </div>
