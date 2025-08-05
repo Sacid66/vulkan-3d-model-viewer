@@ -12,21 +12,21 @@ A high-performance 3D model viewer built with modern Vulkan API, featuring advan
 
 </div>
 
-## ✨ Features
+## Features
 
-### 🎨 **Advanced Rendering**
+### 🎨 **Rendering**
 - **Vulkan API Integration** - High-performance, low-level graphics rendering
 - **Real-time Lighting** - Multiple light sources with enhanced ambient lighting
 - **Anti-aliased Rendering** - Smooth edges and professional quality output
 - **Texture Mapping** - Full PBR material support with automatic UV optimization
 
-### 🔧 **Smart UV Mapping System**
+### 🔧 **UV Mapping System**
 - **Automatic UV Detection** - Intelligent analysis of texture coordinate patterns
 - **UV Scrambling Fix** - Advanced algorithms to detect and correct texture mapping issues
 - **Multi-variant Analysis** - Tests multiple UV transformations to find optimal mapping
 - **Per-mesh Optimization** - Individual analysis for complex multi-mesh models
 
-### 🖥️ **Modern User Interface**
+### 🖥️ **User Interface**
 - **Drag & Drop Support** - Intuitive model and texture loading
 - **Asset Browser** - Organized view of loaded 3D models with thumbnails
 - **Scene Hierarchy** - Tree view of all objects in the scene
@@ -41,7 +41,7 @@ A high-performance 3D model viewer built with modern Vulkan API, featuring advan
 ## 🖼️ Screenshots
 
 ### Main Interface
-*Professional 3D model viewing with modern UI*
+*3D model viewing with imgui UI*
 ![Main Interface](screenshots/main_interface.png)
 
 ### Multi-Model Scene
@@ -95,7 +95,7 @@ A high-performance 3D model viewer built with modern Vulkan API, featuring advan
    ./VulkanModelViewer.exe
    ```
 
-## 🎮 Usage
+## Usage
 
 ### Loading Models
 1. **Drag & Drop**: Simply drag 3D model files into the application window
@@ -119,7 +119,7 @@ A high-performance 3D model viewer built with modern Vulkan API, featuring advan
 - **UV Controls**: Manual override for problematic texture mappings
 - **Statistics**: Monitor performance metrics in real-time
 
-## 🏗️ Architecture
+## Architecture
 
 ### Core Components
 
@@ -144,7 +144,7 @@ vulkan-3d-model-viewer/
 - **GLM** - OpenGL Mathematics library
 - **STB** - Image loading and processing
 
-## 🔬 UV Mapping Algorithm
+## UV Mapping Algorithm
 
 The application features a sophisticated UV mapping system that automatically detects and corrects texture coordinate issues:
 
@@ -169,7 +169,7 @@ std::vector<std::vector<glm::vec2>> uvVariants = {
 int bestVariant = detectBestUVVariant(mesh, uvVariants);
 ```
 
-## 🤝 Contributing
+## Contributing
 
 We welcome contributions! Here's how you can help:
 
@@ -185,7 +185,7 @@ We welcome contributions! Here's how you can help:
 - Test with various 3D model formats
 - Update README for new features
 
-## 📋 Roadmap
+## Roadmap
 
 ### Upcoming Features
 - [ ] **PBR Materials** - Full physically-based rendering support
@@ -201,17 +201,17 @@ We welcome contributions! Here's how you can help:
 - [ ] **Multithreading** - Parallel model processing
 - [ ] **GPU Culling** - Hardware-accelerated frustum culling
 
-## 🐛 Known Issues
+## Known Issues
 
 - Complex UV scrambling patterns may require manual intervention
 - Some FBX files with embedded textures may need re-export
 - Performance may decrease with extremely high-poly models (>1M triangles)
 
-## 📜 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Khronos Group** for the Vulkan specification
 - **Assimp Team** for the excellent 3D model loading library
@@ -223,7 +223,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-**Made with ❤️ and Vulkan**
+**Made with Vulkan**
 
 [⭐ Star this repository](https://github.com/yourusername/vulkan-3d-model-viewer) if you found it helpful!
 
