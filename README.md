@@ -41,7 +41,7 @@ A high-performance 3D model viewer built with modern Vulkan API, featuring advan
 ## 🖼️ Screenshots
 
 ### Main Interface
-*Professional 3D model viewing with modern UI*
+*3D model viewing with imgui UI*
 ![Main Interface](screenshots/main_interface.png)
 
 ### Multi-Model Scene
