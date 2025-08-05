@@ -14,31 +14,31 @@ A high-performance 3D model viewer built with modern Vulkan API, featuring advan
 
 ## Features
 
-### 🎨 **Rendering**
+### **Rendering**
 - **Vulkan API Integration** - High-performance, low-level graphics rendering
 - **Real-time Lighting** - Multiple light sources with enhanced ambient lighting
 - **Anti-aliased Rendering** - Smooth edges and professional quality output
 - **Texture Mapping** - Full PBR material support with automatic UV optimization
 
-### 🔧 **UV Mapping System**
+### **UV Mapping System**
 - **Automatic UV Detection** - Intelligent analysis of texture coordinate patterns
 - **UV Scrambling Fix** - Advanced algorithms to detect and correct texture mapping issues
 - **Multi-variant Analysis** - Tests multiple UV transformations to find optimal mapping
 - **Per-mesh Optimization** - Individual analysis for complex multi-mesh models
 
-### 🖥️ **User Interface**
+### **User Interface**
 - **Drag & Drop Support** - Intuitive model and texture loading
 - **Asset Browser** - Organized view of loaded 3D models with thumbnails
 - **Scene Hierarchy** - Tree view of all objects in the scene
 - **Properties Panel** - Real-time editing of transforms, materials, and UV settings
 - **Statistics Display** - Live FPS, triangle count, and performance metrics
 
-### 📁 **Wide Format Support**
+### **Wide Format Support**
 - **3D Models**: OBJ, FBX, GLTF/GLB, DAE, BLEND, STL, 3DS, PLY, and many more
 - **Textures**: PNG, JPG, JPEG, TGA, BMP, DDS, HDR
 - **Powered by Assimp** - Industry-standard model loading library
 
-## 🖼️ Screenshots
+## Screenshots
 
 ### Main Interface
 *3D model viewing with imgui UI*
