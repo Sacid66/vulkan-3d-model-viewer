@@ -111,10 +111,7 @@ A high-performance 3D model viewer built with modern Vulkan API, featuring advan
 - **Scale**: Uniformly or non-uniformly scale models
 - **Reset**: Quick reset to default transform
 
-### Advanced Features
-- **UV Debug Mode**: Uncomment debug line in `model.frag` to visualize UV coordinates
-- **UV Controls**: Manual override for problematic texture mappings
-- **Statistics**: Monitor performance metrics in real-time
+
 
 ## Architecture
 
@@ -130,7 +127,7 @@ vulkan-3d-model-viewer/
 │   └── main.cpp        # Application entry point
 ├── shaders/            # GLSL vertex and fragment shaders
 ├── assets/             # Sample models and textures
-└── screenshots/        # Application screenshots
+
 ```
 
 ### Key Technologies
@@ -182,7 +179,7 @@ We welcome contributions! Here's how you can help:
 - Test with various 3D model formats
 - Update README for new features
 
-## Roadmap
+
 
 ### Upcoming Features
 - [ ] **PBR Materials** - Full physically-based rendering support
@@ -204,9 +201,6 @@ We welcome contributions! Here's how you can help:
 - Some FBX files with embedded textures may need re-export
 - Performance may decrease with extremely high-poly models (>1M triangles)
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
@@ -222,6 +216,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Made with Vulkan**
 
-[⭐ Star this repository] if you found it helpful!
 
 </div>
