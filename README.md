@@ -50,7 +50,7 @@ A high-performance 3D model viewer built with modern Vulkan API, featuring advan
 
 
 ### Texture Assignment
-*Easy drag-and-drop texture assignment per mesh*
+*Easy load texture assignment per mesh*
 ![Texture Assignment](screenshots/texture_assignment.gif)
 
 ### Real-time Transform Editing
