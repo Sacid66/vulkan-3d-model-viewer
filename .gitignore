@@ -1,41 +1,60 @@
-# Prerequisites
-*.d
+# Build directories
+build/
+cmake-build-*/
+out/
+
+# Visual Studio
+.vs/
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+*.sln
+*.user
 
 # Compiled Object files
-*.slo
-*.lo
 *.o
 *.obj
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Linker files
+*.exe
+*.dll
+*.lib
+*.pdb
+*.exp
 *.ilk
 
-# Debugger Files
-*.pdb
+# CMake
+CMakeCache.txt
+CMakeFiles/
+Makefile
+cmake_install.cmake
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+# Temporary files
+*.tmp
+*.temp
+*~
 
-# Fortran module files
-*.mod
-*.smod
+# Log files
+*.log
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+# IDE files
+.vscode/
+*.sublime-*
 
-# Executables
-*.exe
-*.out
-*.app
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 
-# debug information files
-*.dwo
+# Asset files (uncomment if you don't want to include sample assets)
+# assets/
+# *.fbx
+# *.obj
+# *.gltf
+# *.glb
+
+# Large texture files
+*.exr
+*.hdr
