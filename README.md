@@ -62,7 +62,7 @@ A high-performance 3D model viewer built with modern Vulkan API, featuring advan
 ### Prerequisites
 
 - **Windows 10/11** (64-bit)
-- **Vulkan SDK** 1.3 or later
+- **Vulkan SDK** 1.4.321.1
 - **Visual Studio 2019/2022** with C++17 support
 - **CMake** 3.16 or later
 - **Git** for cloning the repository
