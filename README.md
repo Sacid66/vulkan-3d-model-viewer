@@ -7,38 +7,38 @@
 A high-performance 3D model viewer built with modern Vulkan API, featuring advanced UV mapping algorithms, real-time rendering, and an intuitive drag-and-drop interface.
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-[![Vulkan](https://img.shields.io/badge/Vulkan-1.3-red.svg)](https://vulkan.org/)
+[![Vulkan](https://img.shields.io/badge/Vulkan-1.4-red.svg)](https://vulkan.org/)
 [![Platform](https://img.shields.io/badge/platform-Windows-lightgrey.svg)](https://github.com/yourusername/vulkan-3d-model-viewer)
 
 </div>
 
 ## Features
 
-### 🎨 **Rendering**
+### **Rendering**
 - **Vulkan API Integration** - High-performance, low-level graphics rendering
 - **Real-time Lighting** - Multiple light sources with enhanced ambient lighting
 - **Anti-aliased Rendering** - Smooth edges and professional quality output
 - **Texture Mapping** - Full PBR material support with automatic UV optimization
 
-### 🔧 **UV Mapping System**
+### **UV Mapping System**
 - **Automatic UV Detection** - Intelligent analysis of texture coordinate patterns
 - **UV Scrambling Fix** - Advanced algorithms to detect and correct texture mapping issues
 - **Multi-variant Analysis** - Tests multiple UV transformations to find optimal mapping
 - **Per-mesh Optimization** - Individual analysis for complex multi-mesh models
 
-### 🖥️ **User Interface**
+### **User Interface**
 - **Drag & Drop Support** - Intuitive model and texture loading
 - **Asset Browser** - Organized view of loaded 3D models with thumbnails
 - **Scene Hierarchy** - Tree view of all objects in the scene
 - **Properties Panel** - Real-time editing of transforms, materials, and UV settings
 - **Statistics Display** - Live FPS, triangle count, and performance metrics
 
-### 📁 **Wide Format Support**
+### **Wide Format Support**
 - **3D Models**: OBJ, FBX, GLTF/GLB, DAE, BLEND, STL, 3DS, PLY, and many more
 - **Textures**: PNG, JPG, JPEG, TGA, BMP, DDS, HDR
 - **Powered by Assimp** - Industry-standard model loading library
 
-## 🖼️ Screenshots
+## Screenshots
 
 ### Main Interface
 *3D model viewing with imgui UI*
@@ -57,12 +57,12 @@ A high-performance 3D model viewer built with modern Vulkan API, featuring advan
 *Intuitive transform controls with live preview*
 ![Transform Editing](screenshots/transform_editing.gif)
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
 - **Windows 10/11** (64-bit)
-- **Vulkan SDK** 1.3 or later
+- **Vulkan SDK** 1.4.321.1
 - **Visual Studio 2019/2022** with C++17 support
 - **CMake** 3.16 or later
 - **Git** for cloning the repository
@@ -111,10 +111,7 @@ A high-performance 3D model viewer built with modern Vulkan API, featuring advan
 - **Scale**: Uniformly or non-uniformly scale models
 - **Reset**: Quick reset to default transform
 
-### Advanced Features
-- **UV Debug Mode**: Uncomment debug line in `model.frag` to visualize UV coordinates
-- **UV Controls**: Manual override for problematic texture mappings
-- **Statistics**: Monitor performance metrics in real-time
+
 
 ## Architecture
 
@@ -130,7 +127,7 @@ vulkan-3d-model-viewer/
 │   └── main.cpp        # Application entry point
 ├── shaders/            # GLSL vertex and fragment shaders
 ├── assets/             # Sample models and textures
-└── screenshots/        # Application screenshots
+
 ```
 
 ### Key Technologies
@@ -182,7 +179,7 @@ We welcome contributions! Here's how you can help:
 - Test with various 3D model formats
 - Update README for new features
 
-## Roadmap
+
 
 ### Upcoming Features
 - [ ] **PBR Materials** - Full physically-based rendering support
@@ -204,9 +201,6 @@ We welcome contributions! Here's how you can help:
 - Some FBX files with embedded textures may need re-export
 - Performance may decrease with extremely high-poly models (>1M triangles)
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
@@ -222,6 +216,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **Made with Vulkan**
 
-[⭐ Star this repository](https://github.com/yourusername/vulkan-3d-model-viewer) if you found it helpful!
 
 </div>
