@@ -170,6 +170,9 @@ void UI::renderSceneHierarchy(Scene& scene) {
             size_t sourceIndex = *(const size_t*)payload->Data;
             
             if (sourceIndex < m_loadedModels.size()) {
+                // Wait for any pending rendering to complete before modifying descriptor sets
+                m_device.waitIdle();
+                
                 auto newModel = std::make_unique<Model>();
                 if (newModel->copyFrom(*m_loadedModels[sourceIndex], m_device)) {
                     newModel->setTransform(glm::mat4(1.0f));
@@ -240,6 +243,9 @@ void UI::renderSceneHierarchy(Scene& scene) {
                 size_t sourceIndex = *(const size_t*)payload->Data;
                 
                 if (sourceIndex < m_loadedModels.size()) {
+                    // Wait for any pending rendering to complete before modifying descriptor sets
+                    m_device.waitIdle();
+                    
                     auto newModel = std::make_unique<Model>();
                     if (newModel->copyFrom(*m_loadedModels[sourceIndex], m_device)) {
                         newModel->setTransform(glm::mat4(1.0f));
@@ -716,6 +722,8 @@ void UI::renderSceneViewport(Scene& scene) {
             std::cout << "Received drop payload, index: " << sourceIndex << ", loaded models count: " << m_loadedModels.size() << std::endl;
             
             if (sourceIndex < m_loadedModels.size()) {
+                // Wait for any pending rendering to complete before modifying descriptor sets
+                m_device.waitIdle();
 
                 auto newModel = std::make_unique<Model>();
                 std::cout << "Attempting to copy model: " << m_loadedModels[sourceIndex]->getName() << std::endl;

@@ -1058,36 +1058,32 @@ void Model::setForceUVFlip(bool flip, VulkanDevice& device) {
 }
 
 void Model::autoFixUVsForMaterial(Material& material, VulkanDevice& device) {
-    std::cout << "AUTO-FIX: Trying UV variants for material: " << material.name << std::endl;
-    
+    std::cout << "SIMPLE UV FIX: Applying basic UV mapping for material: " << material.name << std::endl;
 
     for (size_t meshIndex = 0; meshIndex < m_meshes.size(); meshIndex++) {
         auto& mesh = m_meshes[meshIndex];
         if (mesh.materialIndex < m_materials.size() && &m_materials[mesh.materialIndex] == &material) {
-            std::cout << "  Analyzing mesh " << meshIndex << " individually..." << std::endl;
+            std::cout << "  Processing mesh " << meshIndex << " with " << mesh.vertices.size() << " vertices" << std::endl;
             
-            
-            std::vector<std::vector<glm::vec2>> uvVariants = {
-                generateUVVariant(mesh, 0), 
-                generateUVVariant(mesh, 1),  
-                generateUVVariant(mesh, 2), 
-                generateUVVariant(mesh, 3)  
-            };
-            
-
-            int bestVariant = detectBestUVVariant(mesh, uvVariants);
-            std::cout << "  MESH-SPECIFIC: Best UV variant = " << bestVariant << " for mesh " << meshIndex << std::endl;
-            
-
-            for (size_t i = 0; i < mesh.vertices.size() && i < uvVariants[bestVariant].size(); i++) {
-                mesh.vertices[i].texCoord = uvVariants[bestVariant][i];
+            // Simple UV normalization - ensure UVs are in 0-1 range
+            for (auto& vertex : mesh.vertices) {
+                // Clamp UV coordinates to 0-1 range
+                vertex.texCoord.x = std::max(0.0f, std::min(1.0f, vertex.texCoord.x));
+                vertex.texCoord.y = std::max(0.0f, std::min(1.0f, vertex.texCoord.y));
+                
+                // Optional: flip Y coordinate if needed (common for different texture coordinate systems)
+                // vertex.texCoord.y = 1.0f - vertex.texCoord.y;
             }
             
-
+            // Update GPU buffers
             mesh.cleanup(device);
             createSingleMeshBuffers(mesh, device);
+            
+            std::cout << "  UV coordinates normalized for mesh " << meshIndex << std::endl;
         }
     }
+    
+    std::cout << "Simple UV fix complete for material: " << material.name << std::endl;
 }
 
 std::vector<glm::vec2> Model::generateUVVariant(const Mesh& mesh, int variant) {

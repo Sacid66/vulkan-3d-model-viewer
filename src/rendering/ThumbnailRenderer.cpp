@@ -106,7 +106,7 @@ void ThumbnailRenderer::createOffscreenResources() {
     VkSampleCountFlagBits msaaSamples = VK_SAMPLE_COUNT_1_BIT; 
     m_device.createImage(THUMBNAIL_SIZE, THUMBNAIL_SIZE, 1, msaaSamples, 
                         VK_FORMAT_R8G8B8A8_UNORM, VK_IMAGE_TILING_OPTIMAL,
-                        VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT | VK_IMAGE_USAGE_SAMPLED_BIT,
+                        VK_IMAGE_USAGE_COLOR_ATTACHMENT_BIT | VK_IMAGE_USAGE_SAMPLED_BIT | VK_IMAGE_USAGE_TRANSFER_SRC_BIT,
                         VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT, m_colorImage, m_colorImageMemory);
     
 
@@ -396,7 +396,7 @@ void ThumbnailRenderer::createModelPipeline() {
     dynamicState.pDynamicStates = dynamicStates.data();
 
     VkPushConstantRange pushConstantRange{};
-    pushConstantRange.stageFlags = VK_SHADER_STAGE_VERTEX_BIT;
+    pushConstantRange.stageFlags = VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT;
     pushConstantRange.offset = 0;
     pushConstantRange.size = sizeof(PushConstants);
     
@@ -660,7 +660,7 @@ void ThumbnailRenderer::renderModelToTexture(const Model* model, VkImage targetI
 
     pushConstants.model = glm::translate(glm::mat4(1.0f), -modelCenter);
     vkCmdPushConstants(m_commandBuffer, m_modelPipelineLayout, 
-                      VK_SHADER_STAGE_VERTEX_BIT, 0, sizeof(PushConstants), &pushConstants);
+                      VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT, 0, sizeof(PushConstants), &pushConstants);
     
 
     vkCmdBindDescriptorSets(m_commandBuffer, VK_PIPELINE_BIND_POINT_GRAPHICS, 

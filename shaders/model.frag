@@ -45,9 +45,6 @@ void main() {
     vec3 finalColor = baseColor * (0.5 + diffuse1 * 1.2 + diffuse2 * 0.6 + rim * 0.8);
     outColor = vec4(finalColor, 1.0);
     
-    // DEBUG MODE: Show UV coordinates to debug texture mapping
-    outColor = vec4(fragTexCoord, 0.0, 1.0);              // Show UV coordinates (red-green gradient)
-    
     // DEBUG: Uncomment ONLY ONE of these to test different outputs
     // outColor = vec4(abs(normal), 1.0);                    // Show normals as colors
     // outColor = vec4(baseColor, 1.0);                      // Pure texture/material color

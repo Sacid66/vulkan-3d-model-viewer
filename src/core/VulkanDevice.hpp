@@ -113,7 +113,8 @@ private:
 #ifdef NDEBUG
     const bool m_enableValidationLayers = false;
 #else
-    const bool m_enableValidationLayers = false; 
+    const bool m_enableValidationLayers = true; 
+#endif
 };
 
 }
